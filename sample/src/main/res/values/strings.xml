@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TaggedStringsSample</string>
+    <string name="sample_text"><![CDATA[<tagged><red>red</red> <green>green</green> <blue>blue</blue></tagged>]]></string>
+</resources>
