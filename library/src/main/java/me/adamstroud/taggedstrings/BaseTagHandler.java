@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * The case class for all other tag handlers
+ * The base class for all other tag handlers.
  *
  * @author Adam Stroud &#60;<a href="mailto:adam.stroud@gmail.com">adam.stroud@gmail.com</a>&#62;
  */
@@ -55,6 +55,13 @@ public abstract class BaseTagHandler implements Html.TagHandler {
         }
     }
 
+    /**
+     * Resolves the given tag into spans for the tag.
+     *
+     * @param tag The as specified in the string resource.
+
+     * @return The Array of spans to apply to the text defined by the tag.
+     */
     protected abstract Object[] getSpansForTag(String tag);
 
     private void processOpenTag(Editable output, Object... spans) {
