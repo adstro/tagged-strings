@@ -17,7 +17,6 @@ package adamstroud.me.taggedstrings.sample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
 import android.widget.TextView;
 
 /**
@@ -35,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
         sampleTextView = (TextView) findViewById(R.id.sample_text);
 
-        sampleTextView.setText(Html.fromHtml(getString(R.string.sample_text), null, new SampleTagHandler()));
+        final SampleTagHandler sampleTagHandler = new SampleTagHandler();
+
+        sampleTextView.setText(sampleTagHandler.bindTags(getString(R.string.sample_text)));
     }
 }
